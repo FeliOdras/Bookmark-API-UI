@@ -16,7 +16,8 @@ function Header() {
             component: Info
         },
         {
-            path: "/bookmarks",
+            path: "/",
+            exact: true,
             component: Bookmarks
         }
     ]

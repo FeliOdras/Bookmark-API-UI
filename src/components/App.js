@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-      <Header />
+          <Header />
           <Switch>
             <Route exact path="/" render={(props) => (
               this.state.loggedIn ? (
