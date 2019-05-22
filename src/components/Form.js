@@ -8,7 +8,7 @@ export default class Form extends Component {
         const { registered, token } = this.props
         return (
             <div>
-                <h2>{registered && "Login" || "Sign up"}</h2>
+                <h2>{(registered && "Login") || "Sign up"}</h2>
                 <form>
                     <label htmlFor="username">Enter username</label>
                     <br />
@@ -19,7 +19,7 @@ export default class Form extends Component {
                     <input id="password" name="password" type="text" />
                     <br />
                     <div>
-                        {registered && <Link to="/"><button type="submit">Log in</button></Link> || <Link to="/"><button type="submit">Sign Up</button></Link>}
+                        {(registered && <Link to="/"><button type="submit">Log in</button></Link>) || <Link to="/"><button type="submit">Sign Up</button></Link>}
                     </div>
                 </form>
             </div >
