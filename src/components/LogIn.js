@@ -8,8 +8,6 @@ export default class LogIn extends Component {
     this.state = {
       // username: this.props.username,
       // password: this.props.password,
-
-
     }
 
 
@@ -25,7 +23,7 @@ export default class LogIn extends Component {
     // });
   }
 }
-  }
+
 render() {
   return (
     // {username } &&
