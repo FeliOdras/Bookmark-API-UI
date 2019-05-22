@@ -3,7 +3,7 @@ import React from 'react'
 export default function Bookmarks() {
     return (
         <div>
-            Bookmarks
+            <h2 className="h5">Bookmarks</h2>
         </div>
     )
 }
