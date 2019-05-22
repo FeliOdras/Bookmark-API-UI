@@ -1,7 +1,7 @@
 {
   "name": "bookmark-api-ui",
   "version": "0.1.0",
-  "proxy": "http://localhost:4000",
+  "proxy": "https://bookmark-api.fbw-11.now.sh/",
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
