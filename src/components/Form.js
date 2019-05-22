@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Bookmarks extends Component {
+export default class Form extends Component {
     render() {
         return (
             <div>
-                Place some bookmarks here
+                Login /registration form
             </div>
         )
     }
