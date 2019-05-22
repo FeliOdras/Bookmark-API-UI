@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigation from './Navigation';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Login from './Login';
 import Info from './Info';
 import Bookmarks from './Bookmarks';
@@ -21,11 +21,16 @@ function Header() {
         }
     ]
     return (
-        <header className="App-header">
+        <BrowserRouter>
+            <header className="App-header">
 
-            <h1 className="h4 p-2">
-                Bookmarks</h1>
-            <Navigation>
+                <h1 className="h4 p-2">
+                    Bookmarks</h1>
+                <nav>
+                    <Navigation />
+                </nav>
+            </header>
+            <main className="main-content">
                 <Switch>
                     {routes.map((route, index) =>
                         (
@@ -38,8 +43,8 @@ function Header() {
                         )
                     )}
                 </Switch>
-            </Navigation>
-        </header>
+            </main>
+        </BrowserRouter>
     )
 }
 
