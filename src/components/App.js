@@ -4,7 +4,7 @@ import Form from "./Form";
 import Bookmarks from "./Bookmarks";
 import Header from './Header';
 import '../styles/App.scss';
-import Login from '../components/LogIn.js'
+import Login from './Login.js/index.js'
 
 
 <<<<<<< HEAD
