@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Form from "./Form";
 import Bookmarks from "./Bookmarks";
+import Header from './Header';
 import '../styles/App.scss';
+
 
 class App extends React.Component {
   state = {
@@ -14,7 +16,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-
+      <Header />
           <Switch>
             <Route exact path="/" render={(props) => (
               this.state.loggedIn ? (
@@ -30,7 +32,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;
