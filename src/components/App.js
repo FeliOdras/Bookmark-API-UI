@@ -5,7 +5,6 @@ import Bookmarks from "./Bookmarks";
 import Header from './Header';
 import '../styles/App.scss';
 
-
 class App extends React.Component {
   state = {
     registered: false,
