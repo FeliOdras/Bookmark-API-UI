@@ -20,7 +20,6 @@ class App extends React.Component {
 
 
   login = () => {
-    console.log("Login")
     fetch('auth/login', {
       method: 'POST',
       body: JSON.stringify({
@@ -33,7 +32,6 @@ class App extends React.Component {
         'Content-Type': 'application/json'
       }
     }).then(res => res.json()).then(validation => {
-      //console.log(validation.data.token);
       const newToken = validation.data.token
       this.setState({
         token: newToken,
