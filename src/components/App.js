@@ -27,15 +27,19 @@ class App extends React.Component {
       this.setState({
         password: e.target.value
       })
+      console.log("testState");
+
     }
   }
   handleSubmit = (e) => {
-    e.preventDefault();
-    this.setState({
-      name: e.target.value
-    })
+    // e.preventDefault();
+    // this.setState({
+    //   name: e.target.value
+    // })
+    console.log("HandleSubmit");
   }
   login = () => {
+
     console.log("Login")
     fetch('auth/login', {
       method: 'POST',
@@ -79,7 +83,7 @@ class App extends React.Component {
               )
             }
             } />
-            <Route to="/login" render={(props) => <Form {...props} registered={this.state.registered} token={this.state.token} handleChange={this.handleChange} />} />
+            <Route to="/login" render={(props) => <Form {...props} registered={this.state.registered} token={this.state.token} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />} />
           </Switch>
 
         </Router>

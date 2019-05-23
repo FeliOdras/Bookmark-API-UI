@@ -9,7 +9,7 @@ export default class Form extends Component {
         return (
             <div>
                 <h2>{(registered && "Login") || "Sign up"}</h2>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label htmlFor="username">Enter username</label>
                     <br />
                     <input id="username" name="username" type="text" onChange={e => this.props.handleChange("name", e)} />
