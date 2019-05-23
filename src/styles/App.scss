@@ -3,6 +3,10 @@
 
 .App {
   text-align: center;
+  background-image:url(../static/img/bookmark-bg.jpg);
+  background-position:50%;
+  background-size: cover;
+  min-height:100vh;
 }
 
 .App-logo {
@@ -12,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(40,44,52,0.5);
   min-height: 10vh;
   display: flex;
   flex-direction: column;

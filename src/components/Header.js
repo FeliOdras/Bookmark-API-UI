@@ -7,9 +7,11 @@ function Header() {
 
             <h1 className="h4 p-2">
                 Bookmarks</h1>
-            <nav>
-                <Navigation />
-            </nav>
+            <div className="nav-container d-block w-100 ">
+                <nav className="p-0 d-inline-block">
+                    <Navigation />
+                </nav>
+            </div>
         </header>
     </>
     )
