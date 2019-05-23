@@ -5,7 +5,18 @@ import Bookmarks from "./Bookmarks";
 import Header from './Header';
 
 import '../styles/App.scss';
+import Login from './Login.js/index.js'
 
+
+<<<<<<< HEAD
+function App() {
+
+  return (
+    <div className="App">
+      <Login />
+    </div>
+  );
+=======
 class App extends React.Component {
   constructor() {
     super();
@@ -90,7 +101,11 @@ class App extends React.Component {
       </div>
     );
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 654ef630eab4a6c40d9dfc3e3ffe82ce5c9a5f7d
+>>>>>>> b7b53dc99d75227e095668ad32f0dc1e258ee306
 }
 
 export default App;
