@@ -18,6 +18,7 @@ class App extends React.Component {
     token: null
   }
 
+
   login = () => {
     console.log("Login")
     fetch('auth/login', {
@@ -57,7 +58,8 @@ class App extends React.Component {
         component: Info
       },
       {
-        path: "/bookmarks",
+        path: "/",
+        exact: true,
         component: Bookmarks
       }
     ]
