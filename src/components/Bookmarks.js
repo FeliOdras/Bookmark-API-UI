@@ -34,13 +34,15 @@ export default class Bookmarks extends Component {
         console.log()
         return (
             <div>
-                <h2 className="h5">Bookmarks</h2>
-                {this.state.error !== '' ?
-                    <div className="border border-danger text-danger d-inline-block m-auto p-1">{this.state.error}</div> :
-                    this.state.loggedIn === true ?
-                        <div>Bookmarks will be shown here</div> :
-                        <div>Please log in to see your bookmarks</div>
-                }
+                <h2 className="main-heading">Bookmarks</h2>
+                <article className="bg-light-trans shadow w-auto d-inline-block m-auto p-3">
+                    {this.state.error !== '' ?
+                        <div className="border border-danger text-danger d-inline-block m-auto p-1 bg-light-trans">{this.state.error}</div> :
+                        this.state.loggedIn === true ?
+                            <div>Bookmarks will be shown here</div> :
+                            <div>Please log in to see your bookmarks</div>
+                    }
+                </article>
             </div>
         )
     }
