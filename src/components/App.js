@@ -7,6 +7,10 @@ import Header from './Header';
 import '../styles/App.scss';
 
 class App extends React.Component {
+  constructor() {
+    super();
+
+  }
   state = {
     registered: false,
     loggedIn: false,
@@ -14,7 +18,23 @@ class App extends React.Component {
     password: localStorage.getItem("bookmarksPassword") || null,
     token: null
   }
-
+  handleChange = (inputentry, e) => {
+    if (inputentry === "name") {
+      this.setState({
+        name: e.target.value
+      })
+    } else if (inputentry === "password") {
+      this.setState({
+        password: e.target.value
+      })
+    }
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({
+      name: e.target.value
+    })
+  }
   login = () => {
     console.log("Login")
     fetch('auth/login', {
@@ -59,7 +79,7 @@ class App extends React.Component {
               )
             }
             } />
-            <Route to="/login" render={(props) => <Form {...props} registered={this.state.registered} token={this.state.token} />} />
+            <Route to="/login" render={(props) => <Form {...props} registered={this.state.registered} token={this.state.token} handleChange={this.handleChange} />} />
           </Switch>
 
         </Router>
