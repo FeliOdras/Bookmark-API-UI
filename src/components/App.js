@@ -66,7 +66,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <Header />
+          <Header routes={routes} />
           <Home routes={routes} />
         </Router>
       </div>
