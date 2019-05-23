@@ -4,7 +4,8 @@ export default class Bookmarks extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            error: ''
+            error: '',
+            token: this.props.token
         }
     }
 
@@ -17,11 +18,14 @@ export default class Bookmarks extends Component {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNWNlNTQ1ZjlkZTg0MjQyMDUyOTRmZWU4IiwiaWF0IjoxNTU4NTI5NTU0LCJleHAiOjE1NTg1MzMxNTR9.__zf4BNnYb6mFwUr2mhwo5ifpM_Kemfpeqfj-D5Y6NI'
+                'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNWNlNTQ1ZjlkZTg0MjQyMDUyOTRmZWU4IiwiaWF0IjoxNTU4NTk2NzgyLCJleHAiOjE1NTg2MDAzODJ9.yTRdQsdUZyDQZjjUcVbyL7Kdi5LDzeYFB4D5QzrQOi0'
             }
         })
             .then(res => res.json())
-            .then(data => this.setState({ error: data.error }))
+            .then(data => {
+                console.log(data)
+                this.setState({ error: data.error })
+            })
     }
 
 
