@@ -8,7 +8,7 @@ export default class Form extends Component {
         const { registered, token } = this.props
         return (
             <div>
-                <h2>{(registered && "Login") || "Sign up"}</h2>
+                <h2 className="main-heading">{(registered && "Login") || "Sign up"}</h2>
                 <form className="bg-dark text-light d-inline-block m-auto p-3 rounded">
                     <label className="small text-left d-block m-0" htmlFor="username">Enter username</label>
                     <input className="border-0 rounded mb-4 d-block" id="username" name="username" type="text" />
