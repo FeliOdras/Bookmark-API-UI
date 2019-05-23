@@ -1,9 +1,19 @@
 .App-header {
-    nav {
-        font-size: 16px;        
+    .nav-container {
+        font-size: 16px;   
+        background-color:rgba(40,44,52,.7);    
 
         li {
             list-style-type:none;
+
+            a {
+                color:#17a2b8;
+
+                &:hover {
+                    color:#A9D2D8;
+                    text-decoration:none;
+                }
+            }
         }
     }
 }
