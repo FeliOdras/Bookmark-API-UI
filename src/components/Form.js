@@ -19,7 +19,7 @@ export default class Form extends Component {
                     <input id="password" name="password" type="text" />
                     <br />
                     <div>
-                        {(registered && <Link to="/"><button type="submit">Log in</button></Link>) || <Link to="/"><button type="submit">Sign Up</button></Link>}
+                        {(registered && <button onClick={() => <Link to="/" />}>Log in</button>) || <button onClick={() => <Link to="/" />}>Sign Up</button>}
                     </div>
                 </form>
             </div >

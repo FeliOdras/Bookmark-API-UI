@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Form from "./Form";
+import Login from './Login';
+import Info from './Info';
 import Bookmarks from "./Bookmarks";
 import Header from './Header';
+import Home from "./Home"
 
 import '../styles/App.scss';
 
@@ -44,24 +47,25 @@ class App extends React.Component {
   }
 
   render() {
+    const routes = [
+      {
+        path: "/login",
+        component: Form
+      },
+      {
+        path: "/info",
+        component: Info
+      },
+      {
+        path: "/bookmarks",
+        component: Bookmarks
+      }
+    ]
     return (
       <div className="App">
         <Router>
           <Header />
-          <Switch>
-            <Route exact path="/" render={(props) => {
-              console.log(this.state.loggedIn); return (
-                this.state.loggedIn ? (
-                  <Bookmarks {...props} />
-                ) : (
-                    <Redirect to="/login" />
-                  )
-              )
-            }
-            } />
-            <Route to="/login" render={(props) => <Form {...props} registered={this.state.registered} token={this.state.token} />} />
-          </Switch>
-
+          <Home routes={routes} />
         </Router>
       </div>
     );
