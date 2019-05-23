@@ -5,7 +5,7 @@ export default class Bookmarks extends Component {
         super(props)
         this.state = {
             error: '',
-            token: this.props.token
+            token: ''
         }
     }
 

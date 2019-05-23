@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import Form from "./Form";
 import Bookmarks from "./Bookmarks";
 import Header from './Header';
+import Info from './Info';
 
 import '../styles/App.scss';
 
@@ -14,6 +15,7 @@ class App extends React.Component {
     password: localStorage.getItem("bookmarksPassword") || null,
     token: null
   }
+
 
   login = () => {
     console.log("Login")
@@ -44,11 +46,36 @@ class App extends React.Component {
   }
 
   render() {
+    const routes = [
+      {
+        path: "/login",
+        component: Form
+      },
+      {
+        path: "/info",
+        component: Info
+      },
+      {
+        path: "/",
+        exact: true,
+        component: Bookmarks
+      }
+    ]
     return (
       <div className="App">
         <Router>
           <Header />
           <Switch>
+            {routes.map((route, index) =>
+              (
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  component={route.component}
+                />
+              )
+            )}
             <Route exact path="/" render={(props) => {
               console.log(this.state.loggedIn); return (
                 this.state.loggedIn ? (
