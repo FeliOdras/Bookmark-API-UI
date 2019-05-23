@@ -11,9 +11,11 @@ class Header extends React.Component {
 
                     <h1 className="h4 p-2">
                         Bookmarks</h1>
-                    <nav>
-                        <Navigation routes={this.props.routes} />
-                    </nav>
+                    <div className="nav-container w-100">
+                        <nav className="d-inline-block m-auto">
+                            <Navigation routes={this.props.routes} />
+                        </nav>
+                    </div>
                 </header>
             </>
         )
